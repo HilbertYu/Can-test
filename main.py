@@ -23,7 +23,7 @@ for line in lines:
     fid = fid + 1
     num = line.strip()
 #    print(line)
-    time.sleep(0.03)
+    time.sleep(0.02)
     v_num = int(num)
 
     cur_rpm = int(v_num*(gr[gear - 1]/gr[3]))
@@ -31,10 +31,10 @@ for line in lines:
     #gear = (int(num) / 1000) + 1;
 
 
-    if (cur_rpm > 5000):
+    if (cur_rpm > 6000):
         gear = gear + 1
         print("up")
-    elif (cur_rpm < 3000):
+    elif (cur_rpm < 3300):
         gear = gear - 1
         print("down")
 
